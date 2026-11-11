@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
         </CartProvider>
         <footer className="site-footer">
           <p>{SHOP}, Beeramguda, Hyderabad, Telangana. Open daily 10 AM to 8 PM (update with real hours).</p>
-          <p>Privacy · Terms · Shipping and delivery · Cancellation and refund</p>
+          <p>Privacy · Terms · Shipping and delivery · Cancellation and refund · <a href="/admin">Owner login</a></p>
         </footer>
       </body>
     </html>

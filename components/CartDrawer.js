@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import { useCart } from "./CartProvider";
-import { getProduct } from "@/lib/products";
 import { inr, waLink, SHOP } from "@/lib/utils";
 
 export default function CartDrawer() {
@@ -10,7 +9,7 @@ export default function CartDrawer() {
   const [err, setErr] = useState("");
   if (!open) return null;
 
-  const lines = Object.entries(items).map(([id, q]) => ({ ...getProduct(id), q }));
+  const lines = Object.entries(items).map(([id, v]) => ({ id, ...v }));
   const total = lines.reduce((s, l) => s + l.price * l.q, 0);
 
   function send() {
@@ -31,7 +30,7 @@ export default function CartDrawer() {
                 <div className="qty">
                   <button className="btn ghost" onClick={() => remove(l.id)} aria-label="Remove one">−</button>
                   <span>{l.q}</span>
-                  <button className="btn ghost" onClick={() => add(l.id)} disabled={l.q >= l.stock} aria-label="Add one">+</button>
+                  <button className="btn ghost" onClick={() => add(l)} disabled={l.q >= l.stock} aria-label="Add one">+</button>
                 </div>
               </div>
             ))}
