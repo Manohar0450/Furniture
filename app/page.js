@@ -8,7 +8,7 @@ export default function Home() {
         <p>Browse the Beeramguda showroom range online, check what is in stock, then confirm price and delivery with our team on WhatsApp.</p>
         <div className="row">
           <a className="btn" href="#shop">Browse furniture</a>
-          <a className="btn ghost" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Sri+Furniture+Beeramguda+Hyderabad">Get directions</a>
+          <a className="btn ghost" target="_blank" rel="noopener" href="https://www.google.com/maps/place/17%C2%B031'46.0%22N+78%C2%B017'54.8%22E/@17.5294313,78.2985611,17z/data=!3m1!4b1!4m4!3m3!8m2!3d17.5294313!4d78.2985611?entry=ttu&g_ep=EgoyMDI2MTEwOC4wIKXMDSoASAFQAw%3D%3D">Get directions</a>
         </div>
       </section>
       <Shop />
